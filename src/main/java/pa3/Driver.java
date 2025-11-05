@@ -46,7 +46,7 @@ public class Driver {
 
         // For Page Rank calculation
         long totalLinks = links.count(); //if a page has an (1) outgoing link-TH
-        long numPages = indexedTitles.count() //total num wikipages
+        long numPages = indexedTitles.count(); //total num wikipages
         long denom =numPages; //Check if we need to get rid of this based on assignment detial, what if we end up in a "sink"
        
         //Init ranks so each page will start with an equal rank-TH
