@@ -50,7 +50,7 @@ public class Driver {
     public static void main (String[] args) throws Exception {
         SparkConf conf = new SparkConf().setMaster("local").setAppName("IdealPR");
         JavaSparkContext sc = new JavaSparkContext(conf);
-        getPageRanks(conf);
+        getPageRanks(sc);
     }
 
 }
