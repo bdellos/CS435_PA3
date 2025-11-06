@@ -24,7 +24,7 @@ public class Driver {
         // Currently does not do anything with file names, need to pass them to getPageRank
         SparkConf conf = new SparkConf().setMaster("local").setAppName("IdealPR");
         JavaSparkContext sc = new JavaSparkContext(conf);
-        getPageRanks(sc);
+        IdealPageRank.getPageRanks(sc);
     }
 
 }
