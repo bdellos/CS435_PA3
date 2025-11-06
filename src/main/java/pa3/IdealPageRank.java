@@ -103,6 +103,8 @@ public class IdealPageRank {
         // check if we need to join the ranks with the indexedTitles for saving them or
         // printing the top K (ec)-TH
 
+        JavaPairRDD<Double, Long> swapped = ranks.mapToPair(x -> new Tuple2<>(x._2, x._1));
+        JavaPairRDD<Double, Long> swappedAndSorted = swapped.sortByKey();
         //ranks.take(5).forEach(r -> System.out.println("PageID " + r._1 + " rank: " + r._2));
     }
 
