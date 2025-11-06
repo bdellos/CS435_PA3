@@ -1,10 +1,4 @@
-﻿run on juneau (could run on ghost too I guess)
-compile:
-hadoop com.sun.tools.javac.Main -d . tfidf/*.java
-
-Jar creation:
-jar cf Ngram.jar ngram/
-
+﻿
 start dfs:
 start-dfs.sh
 

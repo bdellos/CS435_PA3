@@ -18,10 +18,10 @@ public class IdealPageRank{
 
     private static final int NUM_ITERATIONS = 25;
 
-    public static void getPageRanks (JavaSparkContext sc) {
+    public static void getPageRanks (JavaSparkContext sc, String linesFilePath, String titleFilePath) {
         // for tiny tests
-        JavaRDD<String> titles = sc.textFile("/PA3/input/tiny/titles.txt");
-        JavaRDD<String> lines = sc.textFile("/PA3/input/tiny/links.txt");
+        JavaRDD<String> titles = sc.textFile(titleFilePath);
+        JavaRDD<String> lines = sc.textFile(linesFilePath);
 
 
         // main files
