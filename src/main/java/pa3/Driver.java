@@ -18,8 +18,14 @@ public class Driver {
     private static final int NUM_ITERATIONS = 25;
 
     public static void getPageRanks (JavaSparkContext sc) {
-        JavaRDD<String> titles = sc.textFile("/input/titles-sorted.txt");
-        JavaRDD<String> lines = sc.textFile("/input/links-simple-sorted-sample.txt");
+        // for tiny tests
+        JavaRDD<String> titles = sc.textFile("/input/tiny/titles.txt");
+        JavaRDD<String> lines = sc.textFile("/input/tiny/links.txt");
+
+
+        // main files
+        //JavaRDD<String> titles = sc.textFile("/input/titles-sorted.txt");
+        //JavaRDD<String> lines = sc.textFile("/input/links-simple-sorted-sample.txt");
 
         // Adds indices to the titles so they can be joined with the links
         // Ex: <9, "Name of Page">
@@ -88,6 +94,8 @@ public class Driver {
                 
         }
         //check if we need to join the ranks with the indexedTitles for saving them or printing the top K (ec)-TH
+
+        System.out.println();
     }
 
     public static void main (String[] args) throws Exception {
