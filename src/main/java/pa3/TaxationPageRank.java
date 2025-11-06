@@ -116,9 +116,10 @@ public class TaxationPageRank {
                 return followLink + randomChance;
             });
 
+            System.out.println("TAXATION Iteration: " + i);
+            ranks.take(5).forEach(r -> System.out.println("PageID " + r._1 + " rank: " + r._2));
         }
-        // printing the top K (ec)-TH
-        ranks.take(5).forEach(r -> System.out.println("PageID " + r._1 + " rank: " + r._2));
+        
     }
 
 }
