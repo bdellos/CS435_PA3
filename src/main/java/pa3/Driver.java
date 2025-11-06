@@ -16,6 +16,11 @@ import java.util.List;
 public class Driver {
 
     public static void main (String[] args) throws Exception {
+        if (args.length < 2) {
+            System.err.println("Usage: Driver links-file titles-file");
+            System.exit(1);
+        }
+        // Currently does not do anything with file names, need to pass them to getPageRank
         SparkConf conf = new SparkConf().setMaster("local").setAppName("IdealPR");
         JavaSparkContext sc = new JavaSparkContext(conf);
         getPageRanks(sc);
