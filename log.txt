@@ -1,0 +1,1229 @@
+25/11/05 17:42:15 INFO SparkContext: Running Spark version 3.5.1
+25/11/05 17:42:15 INFO SparkContext: OS info Linux, 5.14.0-570.37.1.el9_6.x86_64, amd64
+25/11/05 17:42:15 INFO SparkContext: Java version 11.0.25
+25/11/05 17:42:15 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/11/05 17:42:15 INFO ResourceUtils: ==============================================================
+25/11/05 17:42:15 INFO ResourceUtils: No custom resources configured for spark.driver.
+25/11/05 17:42:15 INFO ResourceUtils: ==============================================================
+25/11/05 17:42:15 INFO SparkContext: Submitted application: IdealPR
+25/11/05 17:42:15 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+25/11/05 17:42:15 INFO ResourceProfile: Limiting resource is cpu
+25/11/05 17:42:15 INFO ResourceProfileManager: Added ResourceProfile id: 0
+25/11/05 17:42:15 INFO SecurityManager: Changing view acls to: C837201163
+25/11/05 17:42:15 INFO SecurityManager: Changing modify acls to: C837201163
+25/11/05 17:42:15 INFO SecurityManager: Changing view acls groups to: 
+25/11/05 17:42:15 INFO SecurityManager: Changing modify acls groups to: 
+25/11/05 17:42:15 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: C837201163; groups with view permissions: EMPTY; users with modify permissions: C837201163; groups with modify permissions: EMPTY
+25/11/05 17:42:15 INFO Utils: Successfully started service 'sparkDriver' on port 42507.
+25/11/05 17:42:15 INFO SparkEnv: Registering MapOutputTracker
+25/11/05 17:42:15 INFO SparkEnv: Registering BlockManagerMaster
+25/11/05 17:42:15 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+25/11/05 17:42:15 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+25/11/05 17:42:15 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+25/11/05 17:42:16 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-aaaeb9e1-1845-42c6-bd85-b553cc664c6e
+25/11/05 17:42:16 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+25/11/05 17:42:16 INFO SparkEnv: Registering OutputCommitCoordinator
+25/11/05 17:42:16 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+25/11/05 17:42:16 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+25/11/05 17:42:16 INFO SparkContext: Added JAR file:/s/bach/m/under/C837201163/PA3/target/pa3-1.0-SNAPSHOT.jar at spark://grunt.cs.colostate.edu:42507/jars/pa3-1.0-SNAPSHOT.jar with timestamp 1762389735615
+25/11/05 17:42:16 INFO Executor: Starting executor ID driver on host grunt.cs.colostate.edu
+25/11/05 17:42:16 INFO Executor: OS info Linux, 5.14.0-570.37.1.el9_6.x86_64, amd64
+25/11/05 17:42:16 INFO Executor: Java version 11.0.25
+25/11/05 17:42:16 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+25/11/05 17:42:16 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@7c3e4b1a for default.
+25/11/05 17:42:16 INFO Executor: Fetching spark://grunt.cs.colostate.edu:42507/jars/pa3-1.0-SNAPSHOT.jar with timestamp 1762389735615
+25/11/05 17:42:16 INFO TransportClientFactory: Successfully created connection to grunt.cs.colostate.edu/129.82.118.142:42507 after 17 ms (0 ms spent in bootstraps)
+25/11/05 17:42:16 INFO Utils: Fetching spark://grunt.cs.colostate.edu:42507/jars/pa3-1.0-SNAPSHOT.jar to /tmp/spark-3bfd348a-642c-46c8-9061-f98f034de59f/userFiles-c8d472bc-75b0-4b40-9670-02f8d219fb9d/fetchFileTemp3879203244248359105.tmp
+25/11/05 17:42:16 INFO Executor: Adding file:/tmp/spark-3bfd348a-642c-46c8-9061-f98f034de59f/userFiles-c8d472bc-75b0-4b40-9670-02f8d219fb9d/pa3-1.0-SNAPSHOT.jar to class loader default
+25/11/05 17:42:16 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 36225.
+25/11/05 17:42:16 INFO NettyBlockTransferService: Server created on grunt.cs.colostate.edu:36225
+25/11/05 17:42:16 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/11/05 17:42:16 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, grunt.cs.colostate.edu, 36225, None)
+25/11/05 17:42:16 INFO BlockManagerMasterEndpoint: Registering block manager grunt.cs.colostate.edu:36225 with 434.4 MiB RAM, BlockManagerId(driver, grunt.cs.colostate.edu, 36225, None)
+25/11/05 17:42:16 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, grunt.cs.colostate.edu, 36225, None)
+25/11/05 17:42:16 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, grunt.cs.colostate.edu, 36225, None)
+25/11/05 17:42:16 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 224.6 KiB, free 434.2 MiB)
+25/11/05 17:42:16 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 33.9 KiB, free 434.1 MiB)
+25/11/05 17:42:16 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 33.9 KiB, free: 434.4 MiB)
+25/11/05 17:42:16 INFO SparkContext: Created broadcast 0 from textFile at Driver.java:22
+25/11/05 17:42:16 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 224.6 KiB, free 433.9 MiB)
+25/11/05 17:42:16 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 33.9 KiB, free 433.9 MiB)
+25/11/05 17:42:16 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 33.9 KiB, free: 434.3 MiB)
+25/11/05 17:42:16 INFO SparkContext: Created broadcast 1 from textFile at Driver.java:23
+25/11/05 17:42:17 INFO FileInputFormat: Total input files to process : 1
+25/11/05 17:42:17 INFO FileInputFormat: Total input files to process : 1
+25/11/05 17:42:17 INFO SparkContext: Starting job: take at Driver.java:55
+25/11/05 17:42:17 INFO DAGScheduler: Got job 0 (take at Driver.java:55) with 1 output partitions
+25/11/05 17:42:17 INFO DAGScheduler: Final stage: ResultStage 0 (take at Driver.java:55)
+25/11/05 17:42:17 INFO DAGScheduler: Parents of final stage: List()
+25/11/05 17:42:17 INFO DAGScheduler: Missing parents: List()
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 5.5 KiB, free 433.9 MiB)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 3.1 KiB, free 433.9 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.1 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7880 bytes) 
+25/11/05 17:42:17 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+25/11/05 17:42:17 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:17 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1352 bytes result sent to driver
+25/11/05 17:42:17 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 143 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+25/11/05 17:42:17 INFO DAGScheduler: ResultStage 0 (take at Driver.java:55) finished in 0.209 s
+25/11/05 17:42:17 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+25/11/05 17:42:17 INFO DAGScheduler: Job 0 finished: take at Driver.java:55, took 0.237504 s
+PageID 1 links: [2, 3]
+PageID 2 links: [3, 5]
+PageID 3 links: [1]
+PageID 4 links: []
+PageID 5 links: [4]
+25/11/05 17:42:17 INFO SparkContext: Starting job: count at Driver.java:58
+25/11/05 17:42:17 INFO DAGScheduler: Got job 1 (count at Driver.java:58) with 1 output partitions
+25/11/05 17:42:17 INFO DAGScheduler: Final stage: ResultStage 1 (count at Driver.java:58)
+25/11/05 17:42:17 INFO DAGScheduler: Parents of final stage: List()
+25/11/05 17:42:17 INFO DAGScheduler: Missing parents: List()
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 5.4 KiB, free 433.9 MiB)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 3.1 KiB, free 433.9 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.1 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7880 bytes) 
+25/11/05 17:42:17 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+25/11/05 17:42:17 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:17 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 973 bytes result sent to driver
+25/11/05 17:42:17 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 16 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+25/11/05 17:42:17 INFO DAGScheduler: ResultStage 1 (count at Driver.java:58) finished in 0.023 s
+25/11/05 17:42:17 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+25/11/05 17:42:17 INFO DAGScheduler: Job 1 finished: count at Driver.java:58, took 0.026781 s
+25/11/05 17:42:17 INFO SparkContext: Starting job: count at Driver.java:59
+25/11/05 17:42:17 INFO DAGScheduler: Got job 2 (count at Driver.java:59) with 1 output partitions
+25/11/05 17:42:17 INFO DAGScheduler: Final stage: ResultStage 2 (count at Driver.java:59)
+25/11/05 17:42:17 INFO DAGScheduler: Parents of final stage: List()
+25/11/05 17:42:17 INFO DAGScheduler: Missing parents: List()
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[5] at mapToPair at Driver.java:32), which has no missing parents
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 5.6 KiB, free 433.9 MiB)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 3.2 KiB, free 433.9 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.2 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[5] at mapToPair at Driver.java:32) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7991 bytes) 
+25/11/05 17:42:17 INFO Executor: Running task 0.0 in stage 2.0 (TID 2)
+25/11/05 17:42:17 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/titles.txt:0+91
+25/11/05 17:42:17 INFO Executor: Finished task 0.0 in stage 2.0 (TID 2). 973 bytes result sent to driver
+25/11/05 17:42:17 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 15 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+25/11/05 17:42:17 INFO DAGScheduler: ResultStage 2 (count at Driver.java:59) finished in 0.021 s
+25/11/05 17:42:17 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Killing all running tasks in stage 2: Stage finished
+25/11/05 17:42:17 INFO DAGScheduler: Job 2 finished: count at Driver.java:59, took 0.024941 s
+25/11/05 17:42:17 INFO SparkContext: Starting job: take at Driver.java:102
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 0
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 7 (mapValues at Driver.java:64) as input to shuffle 1
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 2
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 11 (flatMapToPair at Driver.java:72) as input to shuffle 50
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 16 (flatMapToPair at Driver.java:72) as input to shuffle 49
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 3
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 21 (flatMapToPair at Driver.java:72) as input to shuffle 48
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 4
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 5
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 26 (flatMapToPair at Driver.java:72) as input to shuffle 47
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 31 (flatMapToPair at Driver.java:72) as input to shuffle 46
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 6
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 7
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 36 (flatMapToPair at Driver.java:72) as input to shuffle 45
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 41 (flatMapToPair at Driver.java:72) as input to shuffle 44
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 8
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 46 (flatMapToPair at Driver.java:72) as input to shuffle 43
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 9
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 51 (flatMapToPair at Driver.java:72) as input to shuffle 42
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 10
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 11
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 56 (flatMapToPair at Driver.java:72) as input to shuffle 41
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 61 (flatMapToPair at Driver.java:72) as input to shuffle 40
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 12
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 66 (flatMapToPair at Driver.java:72) as input to shuffle 39
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 13
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 71 (flatMapToPair at Driver.java:72) as input to shuffle 38
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 14
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 76 (flatMapToPair at Driver.java:72) as input to shuffle 37
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 15
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 81 (flatMapToPair at Driver.java:72) as input to shuffle 36
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 16
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 86 (flatMapToPair at Driver.java:72) as input to shuffle 35
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 17
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 91 (flatMapToPair at Driver.java:72) as input to shuffle 34
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 18
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 19
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 96 (flatMapToPair at Driver.java:72) as input to shuffle 33
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 101 (flatMapToPair at Driver.java:72) as input to shuffle 32
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 20
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 21
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 106 (flatMapToPair at Driver.java:72) as input to shuffle 31
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 111 (flatMapToPair at Driver.java:72) as input to shuffle 30
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 22
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 23
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 116 (flatMapToPair at Driver.java:72) as input to shuffle 29
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 24
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 121 (flatMapToPair at Driver.java:72) as input to shuffle 28
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 126 (flatMapToPair at Driver.java:72) as input to shuffle 27
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 6 (mapToPair at Driver.java:36) as input to shuffle 25
+25/11/05 17:42:17 INFO DAGScheduler: Registering RDD 131 (flatMapToPair at Driver.java:72) as input to shuffle 26
+25/11/05 17:42:17 INFO DAGScheduler: Got job 3 (take at Driver.java:102) with 1 output partitions
+25/11/05 17:42:17 INFO DAGScheduler: Final stage: ResultStage 54 (take at Driver.java:102)
+25/11/05 17:42:17 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 53)
+25/11/05 17:42:17 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 53)
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 49 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 6.1 KiB, free 433.9 MiB)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.9 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 49 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 49.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 47 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO TaskSetManager: Starting task 0.0 in stage 49.0 (TID 3) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:17 INFO Executor: Running task 0.0 in stage 49.0 (TID 3)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 6.1 KiB, free 433.9 MiB)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.9 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 47 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 47.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 43 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 6.1 KiB, free 433.8 MiB)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.8 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 43 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 43.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 39 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 6.1 KiB, free 433.8 MiB)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.8 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 39 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 39.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 23 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 6.1 KiB, free 433.8 MiB)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.8 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 23 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 23.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 15 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 6.1 KiB, free 433.8 MiB)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.8 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 15 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 15.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 11 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 6.1 KiB, free 433.8 MiB)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.8 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO Executor: Finished task 0.0 in stage 49.0 (TID 3). 1183 bytes result sent to driver
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 11 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 11.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO TaskSetManager: Starting task 0.0 in stage 15.0 (TID 4) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:17 INFO Executor: Running task 0.0 in stage 15.0 (TID 4)
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 5 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO TaskSetManager: Finished task 0.0 in stage 49.0 (TID 3) in 34 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Removed TaskSet 49.0, whose tasks have all completed, from pool 
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 6.1 KiB, free 433.8 MiB)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.8 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 12 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 5 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 5.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 3 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 6.1 KiB, free 433.8 MiB)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.8 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 3 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO Executor: Finished task 0.0 in stage 15.0 (TID 4). 1140 bytes result sent to driver
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 4 (MapPartitionsRDD[7] at mapValues at Driver.java:64), which has no missing parents
+25/11/05 17:42:17 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 5) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:17 INFO Executor: Running task 0.0 in stage 3.0 (TID 5)
+25/11/05 17:42:17 INFO TaskSetManager: Finished task 0.0 in stage 15.0 (TID 4) in 14 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Removed TaskSet 15.0, whose tasks have all completed, from pool 
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 6.8 KiB, free 433.8 MiB)
+25/11/05 17:42:17 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 3.8 KiB, free 433.8 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.8 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 14 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 4 (MapPartitionsRDD[7] at mapValues at Driver.java:64) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 4.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 8 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 6.1 KiB, free 433.8 MiB)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.8 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 15 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 8 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 8.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO Executor: Finished task 0.0 in stage 3.0 (TID 5). 1140 bytes result sent to driver
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 10 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 6) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:17 INFO Executor: Running task 0.0 in stage 4.0 (TID 6)
+25/11/05 17:42:17 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 5) in 13 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 6.1 KiB, free 433.8 MiB)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.8 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 16 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 10 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 10.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 14 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_17 stored as values in memory (estimated size 6.1 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_17_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 17 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 14 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 14.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 18 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_18 stored as values in memory (estimated size 6.1 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO Executor: Finished task 0.0 in stage 4.0 (TID 6). 1140 bytes result sent to driver
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_18_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 7) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_18_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 6) in 16 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:17 INFO Executor: Running task 0.0 in stage 5.0 (TID 7)
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 18 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 18 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 18.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 20 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_19 stored as values in memory (estimated size 6.1 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_19_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_19_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 19 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 20 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 20.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 22 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_20 stored as values in memory (estimated size 6.1 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_20_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO Executor: Finished task 0.0 in stage 5.0 (TID 7). 1140 bytes result sent to driver
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_20_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 8) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 20 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 7) in 14 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:17 INFO Executor: Running task 0.0 in stage 8.0 (TID 8)
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 22 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 22.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 26 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_21 stored as values in memory (estimated size 6.1 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_21_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_21_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 21 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 26 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 26.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 28 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO Executor: Finished task 0.0 in stage 8.0 (TID 8). 1140 bytes result sent to driver
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_22 stored as values in memory (estimated size 6.1 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO TaskSetManager: Starting task 0.0 in stage 10.0 (TID 9) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:17 INFO Executor: Running task 0.0 in stage 10.0 (TID 9)
+25/11/05 17:42:17 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 8) in 12 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_22_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_22_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 22 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 28 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 28.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 30 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_23 stored as values in memory (estimated size 6.1 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_23_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_23_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 23 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO Executor: Finished task 0.0 in stage 10.0 (TID 9). 1140 bytes result sent to driver
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 30 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 30.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO TaskSetManager: Starting task 0.0 in stage 11.0 (TID 10) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:17 INFO Executor: Running task 0.0 in stage 11.0 (TID 10)
+25/11/05 17:42:17 INFO TaskSetManager: Finished task 0.0 in stage 10.0 (TID 9) in 10 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 32 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_24 stored as values in memory (estimated size 6.1 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_24_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_24_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 24 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 32 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 32.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 34 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_25 stored as values in memory (estimated size 6.1 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO Executor: Finished task 0.0 in stage 11.0 (TID 10). 1140 bytes result sent to driver
+25/11/05 17:42:17 INFO TaskSetManager: Starting task 0.0 in stage 14.0 (TID 11) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:17 INFO TaskSetManager: Finished task 0.0 in stage 11.0 (TID 10) in 11 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_25_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO Executor: Running task 0.0 in stage 14.0 (TID 11)
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Removed TaskSet 11.0, whose tasks have all completed, from pool 
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_25_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 25 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 34 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 34.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 36 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_26 stored as values in memory (estimated size 6.1 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_26_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_26_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.2 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 26 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 36 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 36.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO Executor: Finished task 0.0 in stage 14.0 (TID 11). 1140 bytes result sent to driver
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 38 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO TaskSetManager: Starting task 0.0 in stage 18.0 (TID 12) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_27 stored as values in memory (estimated size 6.1 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO Executor: Running task 0.0 in stage 18.0 (TID 12)
+25/11/05 17:42:17 INFO TaskSetManager: Finished task 0.0 in stage 14.0 (TID 11) in 11 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Removed TaskSet 14.0, whose tasks have all completed, from pool 
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_27_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.7 MiB)
+25/11/05 17:42:17 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_27_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.2 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 27 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 38 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 38.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 42 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_28 stored as values in memory (estimated size 6.1 KiB, free 433.6 MiB)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_28_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.6 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_28_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.2 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 28 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO Executor: Finished task 0.0 in stage 18.0 (TID 12). 1140 bytes result sent to driver
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 42 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 42.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO TaskSetManager: Starting task 0.0 in stage 20.0 (TID 13) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:17 INFO Executor: Running task 0.0 in stage 20.0 (TID 13)
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 46 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO TaskSetManager: Finished task 0.0 in stage 18.0 (TID 12) in 12 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Removed TaskSet 18.0, whose tasks have all completed, from pool 
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_29 stored as values in memory (estimated size 6.1 KiB, free 433.6 MiB)
+25/11/05 17:42:17 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_29_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.6 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_29_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.2 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 29 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 46 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 46.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 52 (MapPartitionsRDD[6] at mapToPair at Driver.java:36), which has no missing parents
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_30 stored as values in memory (estimated size 6.1 KiB, free 433.6 MiB)
+25/11/05 17:42:17 INFO Executor: Finished task 0.0 in stage 20.0 (TID 13). 1140 bytes result sent to driver
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_30_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 433.6 MiB)
+25/11/05 17:42:17 INFO TaskSetManager: Starting task 0.0 in stage 22.0 (TID 14) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_30_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.5 KiB, free: 434.2 MiB)
+25/11/05 17:42:17 INFO TaskSetManager: Finished task 0.0 in stage 20.0 (TID 13) in 11 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:17 INFO Executor: Running task 0.0 in stage 22.0 (TID 14)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 30 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Removed TaskSet 20.0, whose tasks have all completed, from pool 
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 52 (MapPartitionsRDD[6] at mapToPair at Driver.java:36) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 52.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:17 INFO DAGScheduler: ShuffleMapStage 49 (mapToPair at Driver.java:36) finished in 0.161 s
+25/11/05 17:42:17 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:17 INFO DAGScheduler: running: Set(ShuffleMapStage 15, ShuffleMapStage 30, ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 32, ShuffleMapStage 39, ShuffleMapStage 3, ShuffleMapStage 18, ShuffleMapStage 10, ShuffleMapStage 4, ShuffleMapStage 47, ShuffleMapStage 11, ShuffleMapStage 26, ShuffleMapStage 34, ShuffleMapStage 5, ShuffleMapStage 20, ShuffleMapStage 42, ShuffleMapStage 36, ShuffleMapStage 28, ShuffleMapStage 43, ShuffleMapStage 22, ShuffleMapStage 14, ShuffleMapStage 8, ShuffleMapStage 23)
+25/11/05 17:42:17 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 9, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 17, ShuffleMapStage 53, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 12, ShuffleMapStage 27, ShuffleMapStage 48, ShuffleMapStage 19, ShuffleMapStage 13, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 6, ShuffleMapStage 21, ShuffleMapStage 7, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:17 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:17 INFO DAGScheduler: ShuffleMapStage 15 (mapToPair at Driver.java:36) finished in 0.135 s
+25/11/05 17:42:17 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:17 INFO DAGScheduler: running: Set(ShuffleMapStage 30, ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 32, ShuffleMapStage 39, ShuffleMapStage 3, ShuffleMapStage 18, ShuffleMapStage 10, ShuffleMapStage 4, ShuffleMapStage 47, ShuffleMapStage 11, ShuffleMapStage 26, ShuffleMapStage 34, ShuffleMapStage 5, ShuffleMapStage 20, ShuffleMapStage 42, ShuffleMapStage 36, ShuffleMapStage 28, ShuffleMapStage 43, ShuffleMapStage 22, ShuffleMapStage 14, ShuffleMapStage 8, ShuffleMapStage 23)
+25/11/05 17:42:17 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 9, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 17, ShuffleMapStage 53, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 12, ShuffleMapStage 27, ShuffleMapStage 48, ShuffleMapStage 19, ShuffleMapStage 13, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 6, ShuffleMapStage 21, ShuffleMapStage 7, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:17 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:17 INFO Executor: Finished task 0.0 in stage 22.0 (TID 14). 1140 bytes result sent to driver
+25/11/05 17:42:17 INFO DAGScheduler: ShuffleMapStage 3 (mapToPair at Driver.java:36) finished in 0.119 s
+25/11/05 17:42:17 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:17 INFO TaskSetManager: Starting task 0.0 in stage 23.0 (TID 15) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:17 INFO DAGScheduler: running: Set(ShuffleMapStage 30, ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 32, ShuffleMapStage 39, ShuffleMapStage 18, ShuffleMapStage 10, ShuffleMapStage 4, ShuffleMapStage 47, ShuffleMapStage 11, ShuffleMapStage 26, ShuffleMapStage 34, ShuffleMapStage 5, ShuffleMapStage 20, ShuffleMapStage 42, ShuffleMapStage 36, ShuffleMapStage 28, ShuffleMapStage 43, ShuffleMapStage 22, ShuffleMapStage 14, ShuffleMapStage 8, ShuffleMapStage 23)
+25/11/05 17:42:17 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 9, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 12, ShuffleMapStage 27, ShuffleMapStage 48, ShuffleMapStage 19, ShuffleMapStage 13, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 6, ShuffleMapStage 21, ShuffleMapStage 7, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:17 INFO Executor: Running task 0.0 in stage 23.0 (TID 15)
+25/11/05 17:42:17 INFO TaskSetManager: Finished task 0.0 in stage 22.0 (TID 14) in 11 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:17 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Removed TaskSet 22.0, whose tasks have all completed, from pool 
+25/11/05 17:42:17 INFO DAGScheduler: ShuffleMapStage 4 (mapValues at Driver.java:64) finished in 0.115 s
+25/11/05 17:42:17 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:17 INFO DAGScheduler: running: Set(ShuffleMapStage 30, ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 32, ShuffleMapStage 39, ShuffleMapStage 18, ShuffleMapStage 10, ShuffleMapStage 47, ShuffleMapStage 11, ShuffleMapStage 26, ShuffleMapStage 34, ShuffleMapStage 5, ShuffleMapStage 20, ShuffleMapStage 42, ShuffleMapStage 36, ShuffleMapStage 28, ShuffleMapStage 43, ShuffleMapStage 22, ShuffleMapStage 14, ShuffleMapStage 8, ShuffleMapStage 23)
+25/11/05 17:42:17 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 9, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 12, ShuffleMapStage 27, ShuffleMapStage 48, ShuffleMapStage 19, ShuffleMapStage 13, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 6, ShuffleMapStage 21, ShuffleMapStage 7, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:17 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:17 INFO DAGScheduler: Submitting ShuffleMapStage 6 (MapPartitionsRDD[11] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:17 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_31 stored as values in memory (estimated size 6.6 KiB, free 433.6 MiB)
+25/11/05 17:42:17 INFO MemoryStore: Block broadcast_31_piece0 stored as bytes in memory (estimated size 3.6 KiB, free 433.6 MiB)
+25/11/05 17:42:17 INFO BlockManagerInfo: Added broadcast_31_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.6 KiB, free: 434.2 MiB)
+25/11/05 17:42:17 INFO SparkContext: Created broadcast 31 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 6 (MapPartitionsRDD[11] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Adding task set 6.0 with 1 tasks resource profile 0
+25/11/05 17:42:17 INFO DAGScheduler: ShuffleMapStage 5 (mapToPair at Driver.java:36) finished in 0.135 s
+25/11/05 17:42:17 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:17 INFO DAGScheduler: running: Set(ShuffleMapStage 30, ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 32, ShuffleMapStage 39, ShuffleMapStage 18, ShuffleMapStage 10, ShuffleMapStage 47, ShuffleMapStage 11, ShuffleMapStage 26, ShuffleMapStage 34, ShuffleMapStage 20, ShuffleMapStage 42, ShuffleMapStage 6, ShuffleMapStage 36, ShuffleMapStage 28, ShuffleMapStage 43, ShuffleMapStage 22, ShuffleMapStage 14, ShuffleMapStage 8, ShuffleMapStage 23)
+25/11/05 17:42:17 INFO Executor: Finished task 0.0 in stage 23.0 (TID 15). 1140 bytes result sent to driver
+25/11/05 17:42:17 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 9, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 12, ShuffleMapStage 27, ShuffleMapStage 48, ShuffleMapStage 19, ShuffleMapStage 13, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 7, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:17 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:17 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 16) (grunt.cs.colostate.edu, executor driver, partition 0, PROCESS_LOCAL, 7674 bytes) 
+25/11/05 17:42:17 INFO DAGScheduler: ShuffleMapStage 8 (mapToPair at Driver.java:36) finished in 0.119 s
+25/11/05 17:42:17 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:17 INFO Executor: Running task 0.0 in stage 6.0 (TID 16)
+25/11/05 17:42:17 INFO TaskSetManager: Finished task 0.0 in stage 23.0 (TID 15) in 13 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:17 INFO DAGScheduler: running: Set(ShuffleMapStage 30, ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 32, ShuffleMapStage 39, ShuffleMapStage 18, ShuffleMapStage 10, ShuffleMapStage 47, ShuffleMapStage 11, ShuffleMapStage 26, ShuffleMapStage 34, ShuffleMapStage 20, ShuffleMapStage 42, ShuffleMapStage 6, ShuffleMapStage 36, ShuffleMapStage 28, ShuffleMapStage 43, ShuffleMapStage 22, ShuffleMapStage 14, ShuffleMapStage 23)
+25/11/05 17:42:17 INFO TaskSchedulerImpl: Removed TaskSet 23.0, whose tasks have all completed, from pool 
+25/11/05 17:42:17 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 9, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 12, ShuffleMapStage 27, ShuffleMapStage 48, ShuffleMapStage 19, ShuffleMapStage 13, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 7, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:17 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:17 INFO DAGScheduler: ShuffleMapStage 10 (mapToPair at Driver.java:36) finished in 0.115 s
+25/11/05 17:42:17 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:17 INFO DAGScheduler: running: Set(ShuffleMapStage 30, ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 32, ShuffleMapStage 39, ShuffleMapStage 18, ShuffleMapStage 47, ShuffleMapStage 11, ShuffleMapStage 26, ShuffleMapStage 34, ShuffleMapStage 20, ShuffleMapStage 42, ShuffleMapStage 6, ShuffleMapStage 36, ShuffleMapStage 28, ShuffleMapStage 43, ShuffleMapStage 22, ShuffleMapStage 14, ShuffleMapStage 23)
+25/11/05 17:42:17 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 9, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 12, ShuffleMapStage 27, ShuffleMapStage 48, ShuffleMapStage 19, ShuffleMapStage 13, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 7, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:17 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:17 INFO DAGScheduler: ShuffleMapStage 11 (mapToPair at Driver.java:36) finished in 0.147 s
+25/11/05 17:42:17 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:17 INFO DAGScheduler: running: Set(ShuffleMapStage 30, ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 32, ShuffleMapStage 39, ShuffleMapStage 18, ShuffleMapStage 47, ShuffleMapStage 26, ShuffleMapStage 34, ShuffleMapStage 20, ShuffleMapStage 42, ShuffleMapStage 6, ShuffleMapStage 36, ShuffleMapStage 28, ShuffleMapStage 43, ShuffleMapStage 22, ShuffleMapStage 14, ShuffleMapStage 23)
+25/11/05 17:42:17 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 9, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 12, ShuffleMapStage 19, ShuffleMapStage 13, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 7, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:17 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:17 INFO DAGScheduler: ShuffleMapStage 14 (mapToPair at Driver.java:36) finished in 0.112 s
+25/11/05 17:42:17 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:17 INFO DAGScheduler: running: Set(ShuffleMapStage 30, ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 32, ShuffleMapStage 39, ShuffleMapStage 18, ShuffleMapStage 47, ShuffleMapStage 26, ShuffleMapStage 34, ShuffleMapStage 20, ShuffleMapStage 42, ShuffleMapStage 6, ShuffleMapStage 36, ShuffleMapStage 28, ShuffleMapStage 43, ShuffleMapStage 22, ShuffleMapStage 23)
+25/11/05 17:42:17 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 9, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 12, ShuffleMapStage 19, ShuffleMapStage 13, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 7, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:17 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:17 INFO DAGScheduler: ShuffleMapStage 18 (mapToPair at Driver.java:36) finished in 0.109 s
+25/11/05 17:42:17 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:17 INFO DAGScheduler: running: Set(ShuffleMapStage 30, ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 32, ShuffleMapStage 39, ShuffleMapStage 47, ShuffleMapStage 26, ShuffleMapStage 34, ShuffleMapStage 20, ShuffleMapStage 42, ShuffleMapStage 6, ShuffleMapStage 36, ShuffleMapStage 28, ShuffleMapStage 43, ShuffleMapStage 22, ShuffleMapStage 23)
+25/11/05 17:42:17 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 9, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 12, ShuffleMapStage 19, ShuffleMapStage 13, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 7, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:17 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:17 INFO DAGScheduler: ShuffleMapStage 20 (mapToPair at Driver.java:36) finished in 0.105 s
+25/11/05 17:42:17 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:17 INFO DAGScheduler: running: Set(ShuffleMapStage 30, ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 32, ShuffleMapStage 39, ShuffleMapStage 47, ShuffleMapStage 26, ShuffleMapStage 34, ShuffleMapStage 42, ShuffleMapStage 6, ShuffleMapStage 36, ShuffleMapStage 28, ShuffleMapStage 43, ShuffleMapStage 22, ShuffleMapStage 23)
+25/11/05 17:42:17 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 9, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 12, ShuffleMapStage 19, ShuffleMapStage 13, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 7, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:17 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:17 INFO DAGScheduler: ShuffleMapStage 22 (mapToPair at Driver.java:36) finished in 0.101 s
+25/11/05 17:42:17 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:17 INFO DAGScheduler: running: Set(ShuffleMapStage 30, ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 32, ShuffleMapStage 39, ShuffleMapStage 47, ShuffleMapStage 26, ShuffleMapStage 34, ShuffleMapStage 42, ShuffleMapStage 6, ShuffleMapStage 36, ShuffleMapStage 28, ShuffleMapStage 43, ShuffleMapStage 23)
+25/11/05 17:42:17 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 9, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 12, ShuffleMapStage 19, ShuffleMapStage 13, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 7, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:17 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:17 INFO DAGScheduler: ShuffleMapStage 23 (mapToPair at Driver.java:36) finished in 0.168 s
+25/11/05 17:42:17 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:17 INFO DAGScheduler: running: Set(ShuffleMapStage 30, ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 32, ShuffleMapStage 39, ShuffleMapStage 47, ShuffleMapStage 26, ShuffleMapStage 34, ShuffleMapStage 42, ShuffleMapStage 6, ShuffleMapStage 36, ShuffleMapStage 28, ShuffleMapStage 43)
+25/11/05 17:42:17 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 9, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 12, ShuffleMapStage 19, ShuffleMapStage 13, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 7, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:17 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:17 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:17 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 6 ms
+25/11/05 17:42:17 INFO ShuffleBlockFetcherIterator: Getting 1 (207.0 B) non-empty blocks including 1 (207.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:17 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 6.0 (TID 16). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 26.0 (TID 17) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 26.0 (TID 17)
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 16) in 66 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 6 (flatMapToPair at Driver.java:72) finished in 0.075 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 30, ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 32, ShuffleMapStage 39, ShuffleMapStage 47, ShuffleMapStage 26, ShuffleMapStage 34, ShuffleMapStage 42, ShuffleMapStage 36, ShuffleMapStage 28, ShuffleMapStage 43)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 9, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 12, ShuffleMapStage 19, ShuffleMapStage 13, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 7, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 7 (MapPartitionsRDD[16] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_32 stored as values in memory (estimated size 7.0 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_32_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_32_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 32 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 7 (MapPartitionsRDD[16] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 7.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 26.0 (TID 17). 1140 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 18) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 7.0 (TID 18)
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 26.0 (TID 17) in 12 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 26.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 26 (mapToPair at Driver.java:36) finished in 0.161 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 30, ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 32, ShuffleMapStage 39, ShuffleMapStage 47, ShuffleMapStage 34, ShuffleMapStage 42, ShuffleMapStage 36, ShuffleMapStage 28, ShuffleMapStage 43, ShuffleMapStage 7)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 9, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 12, ShuffleMapStage 19, ShuffleMapStage 13, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (207.0 B) non-empty blocks including 1 (207.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 7.0 (TID 18). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 28.0 (TID 19) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 28.0 (TID 19)
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 18) in 13 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 7 (flatMapToPair at Driver.java:72) finished in 0.020 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 30, ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 32, ShuffleMapStage 39, ShuffleMapStage 47, ShuffleMapStage 34, ShuffleMapStage 42, ShuffleMapStage 36, ShuffleMapStage 28, ShuffleMapStage 43)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 9, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 12, ShuffleMapStage 27, ShuffleMapStage 19, ShuffleMapStage 13, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 9 (MapPartitionsRDD[21] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_33 stored as values in memory (estimated size 7.0 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_33_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_33_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 33 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 9 (MapPartitionsRDD[21] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 9.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 28.0 (TID 19). 1140 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 20) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 9.0 (TID 20)
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 28.0 (TID 19) in 11 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 28.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 28 (mapToPair at Driver.java:36) finished in 0.175 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 30, ShuffleMapStage 9, ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 32, ShuffleMapStage 39, ShuffleMapStage 47, ShuffleMapStage 34, ShuffleMapStage 42, ShuffleMapStage 36, ShuffleMapStage 43)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 12, ShuffleMapStage 27, ShuffleMapStage 19, ShuffleMapStage 13, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (228.0 B) non-empty blocks including 1 (228.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 9.0 (TID 20). 2000 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 30.0 (TID 21) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 30.0 (TID 21)
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 20) in 20 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 9.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 9 (flatMapToPair at Driver.java:72) finished in 0.028 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 30, ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 32, ShuffleMapStage 39, ShuffleMapStage 47, ShuffleMapStage 34, ShuffleMapStage 42, ShuffleMapStage 36, ShuffleMapStage 43)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 12, ShuffleMapStage 27, ShuffleMapStage 19, ShuffleMapStage 13, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 12 (MapPartitionsRDD[26] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_34 stored as values in memory (estimated size 7.0 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_34_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 30.0 (TID 21). 1140 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 32.0 (TID 22) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 30.0 (TID 21) in 14 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 32.0 (TID 22)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 30.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_34_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 34 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 12 (MapPartitionsRDD[26] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 12.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 30 (mapToPair at Driver.java:36) finished in 0.203 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 32, ShuffleMapStage 39, ShuffleMapStage 47, ShuffleMapStage 12, ShuffleMapStage 34, ShuffleMapStage 42, ShuffleMapStage 36, ShuffleMapStage 43)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 19, ShuffleMapStage 13, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO BlockManagerInfo: Removed broadcast_18_piece0 on grunt.cs.colostate.edu:36225 in memory (size: 3.5 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Removed broadcast_12_piece0 on grunt.cs.colostate.edu:36225 in memory (size: 3.5 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 32.0 (TID 22). 1140 bytes result sent to driver
+25/11/05 17:42:18 INFO BlockManagerInfo: Removed broadcast_15_piece0 on grunt.cs.colostate.edu:36225 in memory (size: 3.5 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 12.0 (TID 23) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 12.0 (TID 23)
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 32.0 (TID 22) in 11 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 32.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 32 (mapToPair at Driver.java:36) finished in 0.206 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 39, ShuffleMapStage 47, ShuffleMapStage 12, ShuffleMapStage 34, ShuffleMapStage 42, ShuffleMapStage 36, ShuffleMapStage 43)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 19, ShuffleMapStage 13, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO BlockManagerInfo: Removed broadcast_10_piece0 on grunt.cs.colostate.edu:36225 in memory (size: 3.5 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Removed broadcast_3_piece0 on grunt.cs.colostate.edu:36225 in memory (size: 3.1 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (228.0 B) non-empty blocks including 1 (228.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO BlockManagerInfo: Removed broadcast_11_piece0 on grunt.cs.colostate.edu:36225 in memory (size: 3.5 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Removed broadcast_22_piece0 on grunt.cs.colostate.edu:36225 in memory (size: 3.5 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Removed broadcast_17_piece0 on grunt.cs.colostate.edu:36225 in memory (size: 3.5 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Removed broadcast_32_piece0 on grunt.cs.colostate.edu:36225 in memory (size: 3.7 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 12.0 (TID 23). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 34.0 (TID 24) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 12.0 (TID 23) in 12 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 34.0 (TID 24)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 12.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO BlockManagerInfo: Removed broadcast_13_piece0 on grunt.cs.colostate.edu:36225 in memory (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 12 (flatMapToPair at Driver.java:72) finished in 0.030 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 39, ShuffleMapStage 47, ShuffleMapStage 34, ShuffleMapStage 42, ShuffleMapStage 36, ShuffleMapStage 43)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 19, ShuffleMapStage 13, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO BlockManagerInfo: Removed broadcast_2_piece0 on grunt.cs.colostate.edu:36225 in memory (size: 3.1 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 13 (MapPartitionsRDD[31] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_35 stored as values in memory (estimated size 7.0 KiB, free 433.7 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Removed broadcast_5_piece0 on grunt.cs.colostate.edu:36225 in memory (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_35_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.7 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_35_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 35 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 13 (MapPartitionsRDD[31] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 13.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO BlockManagerInfo: Removed broadcast_14_piece0 on grunt.cs.colostate.edu:36225 in memory (size: 3.8 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Removed broadcast_20_piece0 on grunt.cs.colostate.edu:36225 in memory (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Removed broadcast_31_piece0 on grunt.cs.colostate.edu:36225 in memory (size: 3.6 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 34.0 (TID 24). 1140 bytes result sent to driver
+25/11/05 17:42:18 INFO BlockManagerInfo: Removed broadcast_9_piece0 on grunt.cs.colostate.edu:36225 in memory (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 13.0 (TID 25) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 34.0 (TID 24) in 13 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 13.0 (TID 25)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 34.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 34 (mapToPair at Driver.java:36) finished in 0.223 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 39, ShuffleMapStage 47, ShuffleMapStage 13, ShuffleMapStage 42, ShuffleMapStage 36, ShuffleMapStage 43)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 19, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO BlockManagerInfo: Removed broadcast_19_piece0 on grunt.cs.colostate.edu:36225 in memory (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO BlockManagerInfo: Removed broadcast_4_piece0 on grunt.cs.colostate.edu:36225 in memory (size: 3.2 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO BlockManagerInfo: Removed broadcast_21_piece0 on grunt.cs.colostate.edu:36225 in memory (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (251.0 B) non-empty blocks including 1 (251.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO BlockManagerInfo: Removed broadcast_16_piece0 on grunt.cs.colostate.edu:36225 in memory (size: 3.5 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 13.0 (TID 25). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 36.0 (TID 26) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 13.0 (TID 25) in 13 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 36.0 (TID 26)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 13.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 13 (flatMapToPair at Driver.java:72) finished in 0.023 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 39, ShuffleMapStage 47, ShuffleMapStage 42, ShuffleMapStage 36, ShuffleMapStage 43)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 16, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 19, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 16 (MapPartitionsRDD[36] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_36 stored as values in memory (estimated size 7.0 KiB, free 433.8 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_36_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.7 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_36_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 36 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 16 (MapPartitionsRDD[36] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 16.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 36.0 (TID 26). 1140 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 16.0 (TID 27) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 36.0 (TID 26) in 73 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 16.0 (TID 27)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 36.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 36 (mapToPair at Driver.java:36) finished in 0.301 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 52, ShuffleMapStage 16, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 39, ShuffleMapStage 47, ShuffleMapStage 42, ShuffleMapStage 43)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 19, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (251.0 B) non-empty blocks including 1 (251.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 16.0 (TID 27). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 38.0 (TID 28) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 16.0 (TID 27) in 11 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 38.0 (TID 28)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 16.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 16 (flatMapToPair at Driver.java:72) finished in 0.080 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 38, ShuffleMapStage 39, ShuffleMapStage 47, ShuffleMapStage 42, ShuffleMapStage 43)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 17, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 19, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 17 (MapPartitionsRDD[41] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_37 stored as values in memory (estimated size 7.0 KiB, free 433.7 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_37_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.7 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_37_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 37 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 17 (MapPartitionsRDD[41] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 17.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 38.0 (TID 28). 1140 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 17.0 (TID 29) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 38.0 (TID 28) in 11 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 17.0 (TID 29)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 38.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 38 (mapToPair at Driver.java:36) finished in 0.315 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 17, ShuffleMapStage 39, ShuffleMapStage 47, ShuffleMapStage 42, ShuffleMapStage 43)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 19, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (251.0 B) non-empty blocks including 1 (251.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 17.0 (TID 29). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 39.0 (TID 30) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 39.0 (TID 30)
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 17.0 (TID 29) in 9 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 17.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 17 (flatMapToPair at Driver.java:72) finished in 0.017 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 39, ShuffleMapStage 47, ShuffleMapStage 42, ShuffleMapStage 43)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 19, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 19 (MapPartitionsRDD[46] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_38 stored as values in memory (estimated size 7.0 KiB, free 433.7 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_38_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.7 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_38_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 38 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 19 (MapPartitionsRDD[46] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 19.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 39.0 (TID 30). 1140 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 19.0 (TID 31) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 39.0 (TID 30) in 11 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 19.0 (TID 31)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 39.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 39 (mapToPair at Driver.java:36) finished in 0.451 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 47, ShuffleMapStage 19, ShuffleMapStage 42, ShuffleMapStage 43)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (251.0 B) non-empty blocks including 1 (251.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 19.0 (TID 31). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 42.0 (TID 32) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 42.0 (TID 32)
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 19.0 (TID 31) in 9 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 19.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 19 (flatMapToPair at Driver.java:72) finished in 0.016 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 47, ShuffleMapStage 42, ShuffleMapStage 43)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 21, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 21 (MapPartitionsRDD[51] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_39 stored as values in memory (estimated size 7.0 KiB, free 433.7 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_39_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.7 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_39_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 39 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 21 (MapPartitionsRDD[51] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 21.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 42.0 (TID 32). 1140 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 21.0 (TID 33) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 21.0 (TID 33)
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 42.0 (TID 32) in 11 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 42.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 42 (mapToPair at Driver.java:36) finished in 0.346 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 47, ShuffleMapStage 21, ShuffleMapStage 43)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (251.0 B) non-empty blocks including 1 (251.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 21.0 (TID 33). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 43.0 (TID 34) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 21.0 (TID 33) in 11 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 43.0 (TID 34)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 21.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 21 (flatMapToPair at Driver.java:72) finished in 0.018 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 47, ShuffleMapStage 43)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 31, ShuffleMapStage 53, ShuffleMapStage 24, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 24 (MapPartitionsRDD[56] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_40 stored as values in memory (estimated size 7.0 KiB, free 433.7 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_40_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.7 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_40_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 40 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 24 (MapPartitionsRDD[56] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 24.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 43.0 (TID 34). 1140 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 24.0 (TID 35) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 43.0 (TID 34) in 9 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 24.0 (TID 35)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 43.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 43 (mapToPair at Driver.java:36) finished in 0.494 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 24, ShuffleMapStage 47)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 31, ShuffleMapStage 53, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (251.0 B) non-empty blocks including 1 (251.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 24.0 (TID 35). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 46.0 (TID 36) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 24.0 (TID 35) in 8 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 46.0 (TID 36)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 24.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 24 (flatMapToPair at Driver.java:72) finished in 0.015 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 52, ShuffleMapStage 46, ShuffleMapStage 47)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 31, ShuffleMapStage 53, ResultStage 54, ShuffleMapStage 25, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 25 (MapPartitionsRDD[61] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_41 stored as values in memory (estimated size 7.0 KiB, free 433.7 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_41_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.7 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_41_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 41 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 25 (MapPartitionsRDD[61] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 25.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 46.0 (TID 36). 1140 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 25.0 (TID 37) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 46.0 (TID 36) in 11 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 25.0 (TID 37)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 46.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 46 (mapToPair at Driver.java:36) finished in 0.378 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 52, ShuffleMapStage 25, ShuffleMapStage 47)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 31, ShuffleMapStage 53, ResultStage 54, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (251.0 B) non-empty blocks including 1 (251.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 25.0 (TID 37). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 47.0 (TID 38) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 25.0 (TID 37) in 9 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 47.0 (TID 38)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 25.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 25 (flatMapToPair at Driver.java:72) finished in 0.019 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 52, ShuffleMapStage 47)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 31, ShuffleMapStage 53, ResultStage 54, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 27, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 27 (MapPartitionsRDD[66] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_42 stored as values in memory (estimated size 7.0 KiB, free 433.7 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_42_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.7 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_42_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 42 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 27 (MapPartitionsRDD[66] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 27.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 47.0 (TID 38). 1140 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 27.0 (TID 39) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 27.0 (TID 39)
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 47.0 (TID 38) in 10 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 47.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 47 (mapToPair at Driver.java:36) finished in 0.537 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 52, ShuffleMapStage 27)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 31, ShuffleMapStage 53, ResultStage 54, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (251.0 B) non-empty blocks including 1 (251.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 27.0 (TID 39). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 52.0 (TID 40) (grunt.cs.colostate.edu, executor driver, partition 0, ANY, 7869 bytes) 
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 27.0 (TID 39) in 10 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 52.0 (TID 40)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 27.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 27 (flatMapToPair at Driver.java:72) finished in 0.017 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 52)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 31, ShuffleMapStage 53, ResultStage 54, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 29, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 29 (MapPartitionsRDD[71] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO HadoopRDD: Input split: hdfs://grunt.cs.colostate.edu:30201/PA3/input/tiny/links.txt:0+27
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_43 stored as values in memory (estimated size 7.0 KiB, free 433.7 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_43_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.7 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_43_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 43 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 29 (MapPartitionsRDD[71] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 29.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 52.0 (TID 40). 1140 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 29.0 (TID 41) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 52.0 (TID 40) in 11 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 29.0 (TID 41)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 52.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 52 (mapToPair at Driver.java:36) finished in 0.411 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set(ShuffleMapStage 29)
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 31, ShuffleMapStage 53, ResultStage 54, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (251.0 B) non-empty blocks including 1 (251.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 29.0 (TID 41). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 29.0 (TID 41) in 10 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 29.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 29 (flatMapToPair at Driver.java:72) finished in 0.017 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set()
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 31, ShuffleMapStage 53, ResultStage 54, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 31 (MapPartitionsRDD[76] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_44 stored as values in memory (estimated size 7.0 KiB, free 433.7 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_44_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.7 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_44_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.3 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 44 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 31 (MapPartitionsRDD[76] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 31.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 31.0 (TID 42) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 31.0 (TID 42)
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (228.0 B) non-empty blocks including 1 (228.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 31.0 (TID 42). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 31.0 (TID 42) in 9 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 31.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 31 (flatMapToPair at Driver.java:72) finished in 0.012 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set()
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 53, ResultStage 54, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 33, ShuffleMapStage 48, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 33 (MapPartitionsRDD[81] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_45 stored as values in memory (estimated size 7.0 KiB, free 433.7 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_45_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.7 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_45_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 45 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 33 (MapPartitionsRDD[81] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 33.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 33.0 (TID 43) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 33.0 (TID 43)
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (228.0 B) non-empty blocks including 1 (228.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 33.0 (TID 43). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 33.0 (TID 43) in 7 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 33.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 33 (flatMapToPair at Driver.java:72) finished in 0.011 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set()
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 53, ResultStage 54, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 48, ShuffleMapStage 35, ShuffleMapStage 50, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 35 (MapPartitionsRDD[86] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_46 stored as values in memory (estimated size 7.0 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_46_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_46_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 46 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 35 (MapPartitionsRDD[86] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 35.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 35.0 (TID 44) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 35.0 (TID 44)
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (228.0 B) non-empty blocks including 1 (228.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 35.0 (TID 44). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 35.0 (TID 44) in 7 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 35.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 35 (flatMapToPair at Driver.java:72) finished in 0.012 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set()
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 37, ShuffleMapStage 53, ResultStage 54, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 48, ShuffleMapStage 50, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 37 (MapPartitionsRDD[91] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_47 stored as values in memory (estimated size 7.0 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_47_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_47_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 47 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 37 (MapPartitionsRDD[91] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 37.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 37.0 (TID 45) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 37.0 (TID 45)
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (228.0 B) non-empty blocks including 1 (228.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 37.0 (TID 45). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 37.0 (TID 45) in 8 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 37.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 37 (flatMapToPair at Driver.java:72) finished in 0.012 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set()
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 53, ResultStage 54, ShuffleMapStage 40, ShuffleMapStage 41, ShuffleMapStage 48, ShuffleMapStage 50, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 40 (MapPartitionsRDD[96] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_48 stored as values in memory (estimated size 7.0 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_48_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_48_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 48 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 40 (MapPartitionsRDD[96] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 40.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 40.0 (TID 46) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 40.0 (TID 46)
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (251.0 B) non-empty blocks including 1 (251.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 40.0 (TID 46). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 40.0 (TID 46) in 7 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 40.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 40 (flatMapToPair at Driver.java:72) finished in 0.010 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set()
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 53, ResultStage 54, ShuffleMapStage 41, ShuffleMapStage 48, ShuffleMapStage 50, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 41 (MapPartitionsRDD[101] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_49 stored as values in memory (estimated size 7.0 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_49_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_49_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 49 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 41 (MapPartitionsRDD[101] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 41.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 41.0 (TID 47) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 41.0 (TID 47)
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (251.0 B) non-empty blocks including 1 (251.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 41.0 (TID 47). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 41.0 (TID 47) in 7 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 41.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 41 (flatMapToPair at Driver.java:72) finished in 0.010 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set()
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 53, ResultStage 54, ShuffleMapStage 48, ShuffleMapStage 50, ShuffleMapStage 44)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 44 (MapPartitionsRDD[106] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_50 stored as values in memory (estimated size 7.0 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_50_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_50_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 50 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 44 (MapPartitionsRDD[106] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 44.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 44.0 (TID 48) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 44.0 (TID 48)
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (228.0 B) non-empty blocks including 1 (228.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 44.0 (TID 48). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 44.0 (TID 48) in 7 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 44.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 44 (flatMapToPair at Driver.java:72) finished in 0.010 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set()
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 45, ShuffleMapStage 53, ResultStage 54, ShuffleMapStage 48, ShuffleMapStage 50)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 45 (MapPartitionsRDD[111] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_51 stored as values in memory (estimated size 7.0 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_51_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_51_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 51 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 45 (MapPartitionsRDD[111] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 45.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 45.0 (TID 49) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 45.0 (TID 49)
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (251.0 B) non-empty blocks including 1 (251.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 45.0 (TID 49). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 45.0 (TID 49) in 9 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 45.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 45 (flatMapToPair at Driver.java:72) finished in 0.012 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set()
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 53, ResultStage 54, ShuffleMapStage 48, ShuffleMapStage 50)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 48 (MapPartitionsRDD[116] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_52 stored as values in memory (estimated size 7.0 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_52_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_52_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 52 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 48 (MapPartitionsRDD[116] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 48.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 48.0 (TID 50) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 48.0 (TID 50)
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (228.0 B) non-empty blocks including 1 (228.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 48.0 (TID 50). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 48.0 (TID 50) in 8 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 48.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 48 (flatMapToPair at Driver.java:72) finished in 0.012 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set()
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 53, ResultStage 54, ShuffleMapStage 50)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 50 (MapPartitionsRDD[121] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_53 stored as values in memory (estimated size 7.0 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_53_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_53_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 53 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 50 (MapPartitionsRDD[121] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 50.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 50.0 (TID 51) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 50.0 (TID 51)
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (251.0 B) non-empty blocks including 1 (251.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 50.0 (TID 51). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 50.0 (TID 51) in 7 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 50.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 50 (flatMapToPair at Driver.java:72) finished in 0.010 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set()
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 51, ShuffleMapStage 53, ResultStage 54)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 51 (MapPartitionsRDD[126] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_54 stored as values in memory (estimated size 7.0 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_54_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_54_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 54 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 51 (MapPartitionsRDD[126] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 51.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 51.0 (TID 52) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 51.0 (TID 52)
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (228.0 B) non-empty blocks including 1 (228.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 51.0 (TID 52). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 51.0 (TID 52) in 6 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 51.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 51 (flatMapToPair at Driver.java:72) finished in 0.009 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set()
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ShuffleMapStage 53, ResultStage 54)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ShuffleMapStage 53 (MapPartitionsRDD[131] at flatMapToPair at Driver.java:72), which has no missing parents
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_55 stored as values in memory (estimated size 7.0 KiB, free 433.6 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_55_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.5 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_55_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 3.7 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 55 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 53 (MapPartitionsRDD[131] at flatMapToPair at Driver.java:72) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 53.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 53.0 (TID 53) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7828 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 53.0 (TID 53)
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (276.0 B) non-empty blocks including 1 (276.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (251.0 B) non-empty blocks including 1 (251.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 53.0 (TID 53). 1914 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 53.0 (TID 53) in 6 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 53.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ShuffleMapStage 53 (flatMapToPair at Driver.java:72) finished in 0.009 s
+25/11/05 17:42:18 INFO DAGScheduler: looking for newly runnable stages
+25/11/05 17:42:18 INFO DAGScheduler: running: Set()
+25/11/05 17:42:18 INFO DAGScheduler: waiting: Set(ResultStage 54)
+25/11/05 17:42:18 INFO DAGScheduler: failed: Set()
+25/11/05 17:42:18 INFO DAGScheduler: Submitting ResultStage 54 (ShuffledRDD[132] at reduceByKey at Driver.java:93), which has no missing parents
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_56 stored as values in memory (estimated size 5.2 KiB, free 433.5 MiB)
+25/11/05 17:42:18 INFO MemoryStore: Block broadcast_56_piece0 stored as bytes in memory (estimated size 2.9 KiB, free 433.5 MiB)
+25/11/05 17:42:18 INFO BlockManagerInfo: Added broadcast_56_piece0 in memory on grunt.cs.colostate.edu:36225 (size: 2.9 KiB, free: 434.2 MiB)
+25/11/05 17:42:18 INFO SparkContext: Created broadcast 56 from broadcast at DAGScheduler.scala:1585
+25/11/05 17:42:18 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 54 (ShuffledRDD[132] at reduceByKey at Driver.java:93) (first 15 tasks are for partitions Vector(0))
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Adding task set 54.0 with 1 tasks resource profile 0
+25/11/05 17:42:18 INFO TaskSetManager: Starting task 0.0 in stage 54.0 (TID 54) (grunt.cs.colostate.edu, executor driver, partition 0, NODE_LOCAL, 7622 bytes) 
+25/11/05 17:42:18 INFO Executor: Running task 0.0 in stage 54.0 (TID 54)
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Getting 1 (251.0 B) non-empty blocks including 1 (251.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/11/05 17:42:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/11/05 17:42:18 INFO Executor: Finished task 0.0 in stage 54.0 (TID 54). 2040 bytes result sent to driver
+25/11/05 17:42:18 INFO TaskSetManager: Finished task 0.0 in stage 54.0 (TID 54) in 4 ms on grunt.cs.colostate.edu (executor driver) (1/1)
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Removed TaskSet 54.0, whose tasks have all completed, from pool 
+25/11/05 17:42:18 INFO DAGScheduler: ResultStage 54 (take at Driver.java:102) finished in 0.008 s
+25/11/05 17:42:18 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+25/11/05 17:42:18 INFO TaskSchedulerImpl: Killing all running tasks in stage 54: Stage finished
+25/11/05 17:42:18 INFO DAGScheduler: Job 3 finished: take at Driver.java:102, took 0.764615 s
+PageID 4 rank: 0.003955078125000001
+PageID 1 rank: 0.010952758789062501
+PageID 3 rank: 0.0096893310546875
+PageID 5 rank: 0.00349884033203125
+PageID 2 rank: 0.006190490722656251
+25/11/05 17:42:18 INFO SparkContext: Invoking stop() from shutdown hook
+25/11/05 17:42:18 INFO SparkContext: SparkContext is stopping with exitCode 0.
+25/11/05 17:42:18 INFO SparkUI: Stopped Spark web UI at http://grunt.cs.colostate.edu:4040
+25/11/05 17:42:18 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+25/11/05 17:42:18 INFO MemoryStore: MemoryStore cleared
+25/11/05 17:42:18 INFO BlockManager: BlockManager stopped
+25/11/05 17:42:18 INFO BlockManagerMaster: BlockManagerMaster stopped
+25/11/05 17:42:18 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+25/11/05 17:42:18 INFO SparkContext: Successfully stopped SparkContext
+25/11/05 17:42:18 INFO ShutdownHookManager: Shutdown hook called
+25/11/05 17:42:18 INFO ShutdownHookManager: Deleting directory /tmp/spark-3bfd348a-642c-46c8-9061-f98f034de59f
+25/11/05 17:42:18 INFO ShutdownHookManager: Deleting directory /tmp/spark-380efe02-fef6-44a4-94ff-359129ff76b8
