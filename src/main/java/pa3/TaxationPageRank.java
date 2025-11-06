@@ -12,10 +12,12 @@ import org.apache.spark.sql.SparkSession;
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Iterator;
 
-public class IdealPageRank {
+public class TaxationPageRank {
 
     private static final int NUM_ITERATIONS = 25;
+    private static final double BETA = 0.85;
 
     public static void getPageRanks(JavaSparkContext sc, String linesFilePath, String titleFilePath) {
 
@@ -51,9 +53,7 @@ public class IdealPageRank {
 
         long totalLinks = links.count();
 
-        // Init ranks so each page will start with an equal rank-TH
-        // If we do change denom or remove it, this will change from denom to totalLinks
-        // and get rid of denom variable-TH
+        // Init ranks to 1/totalLinks
         JavaPairRDD<Long, Double> ranks = links.mapValues(v -> 1.0 / (double) totalLinks);
         //ranks.take(5).forEach(r -> System.out.println(r._1 + " rank: " + r._2));
 
@@ -92,18 +92,33 @@ public class IdealPageRank {
              */
             JavaPairRDD<Long, Double> newRanking = contribute.reduceByKey((a, b) -> a + b);
 
-            // Step 3
-            // rand update for the next iter, new rank turns to input for the new cycle of
-            // the loop
-            ranks = newRanking;
-            // System.out.println("Iteration: " + i);
-            // ranks.take(5).forEach(r -> System.out.println(r._1 + " rank: " + r._2));
+            // ###### TAXATION ######
+            // Step 3 is taxation
+            // cogroup groups together contribution list with links incase one item never gets any contribution
+            // we check if the page received contributions:
+            //      if it did: used the combined contribution value
+            //      if it did NOT: use 0.0 as contribution value
+            // apply taxation formula; 85% chance we follow the link
+            // 15% chance we go somewhere random (but spilt across all places)
+            // so every page gets an additional 15%/totalLinks addition (randomChance)
+            // e is not needed because it just is multiplying by 1
+            ranks = links.cogroup(newRanking).mapValues(v -> {
+                Iterator<Double> contributionIterator = v._2.iterator();
+                double contribution;
+                if(contributionIterator.hasNext()) {
+                    contribution = contributionIterator.next();
+                }
+                else {
+                    contribution = 0.0;
+                }
+                double followLink = BETA * contribution;
+                double randomChance = (1.0 - BETA) / totalLinks;
+                return followLink + randomChance;
+            });
 
         }
-        // check if we need to join the ranks with the indexedTitles for saving them or
         // printing the top K (ec)-TH
-
-        //ranks.take(5).forEach(r -> System.out.println("PageID " + r._1 + " rank: " + r._2));
+        ranks.take(5).forEach(r -> System.out.println("PageID " + r._1 + " rank: " + r._2));
     }
 
 }
