@@ -19,8 +19,8 @@ public class Driver {
 
     public static void getPageRanks (JavaSparkContext sc) {
         // for tiny tests
-        JavaRDD<String> titles = sc.textFile("/input/tiny/titles.txt");
-        JavaRDD<String> lines = sc.textFile("/input/tiny/links.txt");
+        JavaRDD<String> titles = sc.textFile("/PA3/input/tiny/titles.txt");
+        JavaRDD<String> lines = sc.textFile("/PA3/input/tiny/links.txt");
 
 
         // main files
@@ -36,8 +36,13 @@ public class Driver {
         JavaPairRDD<Long, List<Long>> links = lines.mapToPair(line -> {
             String[] parts = line.split(":");   // [0] source, [1] destinations
             Long source = Long.parseLong(parts[0].trim());
-            String[] outgoing = parts[1].split("\\s+");
             List<Long> dests = new ArrayList<>();
+            // for pages that have no outgoing links
+            if (parts.length < 2) {
+                return new Tuple2<>(source, dests);
+            }
+
+            String[] outgoing = parts[1].split("\\s+");
             for (String dest : outgoing) {
                 dest = dest.trim();
                 if (!dest.isEmpty()) {
@@ -47,8 +52,7 @@ public class Driver {
             return new Tuple2<>(source, dests);
         });
 
-
-
+        links.take(5).forEach(r -> System.out.println("PageID " + r._1 + " links: " + r._2));
 
         // For Page Rank calculation
         long totalLinks = links.count(); //if a page has an (1) outgoing link-TH
@@ -95,7 +99,7 @@ public class Driver {
         }
         //check if we need to join the ranks with the indexedTitles for saving them or printing the top K (ec)-TH
 
-        System.out.println();
+        ranks.take(5).forEach(r -> System.out.println("PageID " + r._1 + " rank: " + r._2));
     }
 
     public static void main (String[] args) throws Exception {
