@@ -20,6 +20,7 @@ public class Driver {
             System.err.println("Usage: Driver links-file titles-file");
             System.exit(1);
         }
+        // agrs[0] will be the links file and args[1] will be the titlesFile
         // Currently does not do anything with file names, need to pass them to getPageRank
         SparkConf conf = new SparkConf().setMaster("local").setAppName("IdealPR");
         JavaSparkContext sc = new JavaSparkContext(conf);
