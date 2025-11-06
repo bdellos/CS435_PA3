@@ -28,7 +28,7 @@ public class Driver {
         // Create list of sources and its outgoing links
         // Ex: <9, [2, 68, 318]>
         JavaPairRDD<Long, List<Long>> links = lines.mapToPair(line -> {
-            String[] parts = line.split(":").trim();   // [0] source, [1] destinations
+            String[] parts = line.split(":");   // [0] source, [1] destinations
             Long source = Long.parseLong(parts[0].trim());
             String[] outgoing = parts[1].split("\\s+");
             List<Long> dests = new ArrayList<>();
@@ -51,7 +51,7 @@ public class Driver {
        
         //Init ranks so each page will start with an equal rank-TH
         //If we do change denom or remove it, this will change from denom to totalLinks and get rid of denom variable-TH
-        JavaPairRDD<String, Double> ranks = links.mapValues(v -> 1.0 / (double) denom); 
+        JavaPairRDD<Long, Double> ranks = links.mapValues(v -> 1.0 / (double) denom); 
 
         // Attempt to converge in NUM_ITERATIONS attempts
         for (int i = 0; i < NUM_ITERATIONS; i++) {
@@ -59,17 +59,17 @@ public class Driver {
             //Step 1
             /*each page will share its current rank among all pages that it links to
             so if the page rank is 1/4(0.25) with ie 5 links out, it will convert to 0.25/5 for the dest links out from it =.05*/
-            JavaPairRDD<String, Double> contribute = links.join(ranks).flatMapToPair(kv -> {
-                String src = kv._1; //source page id-TH
+            JavaPairRDD<Long, Double> contribute = links.join(ranks).flatMapToPair(kv -> {
+                Long src = kv._1; //source page id-TH
                 List<Long> dests = kv._2._1; //list of the outgoing links of the neighboring pages
                 Double rank = kv._2._2; //current ranking of the source page-TH
-                List<Tuple2<String, Double>> results = new ArrayList<>(); //created to hold pairs of <destPage, Contributions>
+                List<Tuple2<Long, Double>> results = new ArrayList<>(); //created to hold pairs of <destPage, Contributions>
                    
                 /*if the page has actual outgoing links, distr the rank*/
                 if(!dests.isEmpty()){
                     double shareRank = rank/dests.size(); //what will the link get once its shared-TH
                     for(Long d: dests){
-                        results.add(new Tuple2<>(String.valueOf(d), shareRank)); //conversionof long to a string for the Key which is a string
+                        results.add(new Tuple2<>(d, shareRank)); //conversionof long to a string for the Key which is a string
                     }
                 }
                     //iterator will return to spark and flatten output-TH
@@ -80,7 +80,7 @@ public class Driver {
             //Step2:
             /*take the contributions which point to the same page basedon above 
             to gather the sum of the total incoming tally each page received from the iteration*/
-            JavaPairRDD<String, Double> newRanking = contribute.reduceByKey((a,b) -> a + b );
+            JavaPairRDD<Long, Double> newRanking = contribute.reduceByKey((a,b) -> a + b );
                
             //Step 3
             //rand update for the next iter, new rank turns to input for the new cycle of the loop 
