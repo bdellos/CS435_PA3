@@ -1,0 +1,23 @@
+﻿run on juneau (could run on ghost too I guess)
+compile:
+hadoop com.sun.tools.javac.Main -d . tfidf/*.java
+
+Jar creation:
+jar cf Ngram.jar ngram/
+
+start dfs:
+start-dfs.sh
+
+Confirm it works:
+mvn package
+ls -l target/pa3-1.0-SNAPSHOT.jar
+
+Put files in hadoop:
+hadoop fs -put -f ~/CS435/PA3/CS435_PA3 /
+
+List files in hadoop
+hadoop fs -ls /CS435_PA3
+
+
+Run job:
+spark-submit --class pa3.Driver --master local[*] /s/parsons/g/under/icurtis/CS435/PA3/CS435_PA3/target/pa3-1.0-SNAPSHOT.jar /CS435_PA3/input/tiny/links.txt /CS435_PA3/input/tiny/titles.txt
