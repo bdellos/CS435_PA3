@@ -111,7 +111,7 @@ public class IdealPageRank {
 
         sc.parallelize(topK)
             .map(x -> "(" + x._2 + ", " + x._1 + ")")
-            .saveAsTextFile("/PA3/output/top" + k);
+            .saveAsTextFile("/PA3/output/top" + k + "ideal");
 
     }
 
