@@ -28,7 +28,7 @@ public class Driver {
         // Create list of sources and its outgoing links
         // Ex: <9, [2, 68, 318]>
         JavaPairRDD<Long, List<Long>> links = lines.mapToPair(line -> {
-            String[] parts = line.split(":");   // [0] source, [1] destinations
+            String[] parts = line.split(":").trim();   // [0] source, [1] destinations
             Long source = Long.parseLong(parts[0].trim());
             String[] outgoing = parts[1].split("\\s+");
             List<Long> dests = new ArrayList<>();
