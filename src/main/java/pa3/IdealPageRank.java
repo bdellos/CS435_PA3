@@ -8,6 +8,7 @@ import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.sql.SparkSession;
+import org.sparkproject.spark_core.protobuf.JavaType;
 
 import java.util.Arrays;
 import java.util.ArrayList;
@@ -100,10 +101,18 @@ public class IdealPageRank {
             // ranks.take(5).forEach(r -> System.out.println(r._1 + " rank: " + r._2));
 
         }
-        // check if we need to join the ranks with the indexedTitles for saving them or
-        // printing the top K (ec)-TH
 
-        //ranks.take(5).forEach(r -> System.out.println("PageID " + r._1 + " rank: " + r._2));
+        int k = 10;
+
+        JavaPairRDD<Long, Tuple2<Double, String>> joined = ranks.join(indexedTitles);
+        JavaPairRDD<Double, String> swapped = joined.mapToPair(x -> new Tuple2(x._2._1, x._2._2));
+        JavaPairRDD<Double, String> sortedSwapped = swapped.sortByKey(false);
+        List<Tuple2<Double, String>> topK = sortedSwapped.take(k);
+
+        sc.parallelize(topK)
+            .map(x -> "(" + x._2 + ", " + x._1 + ")")
+            .saveAsTextFile("/PA3/output/top" + k + "ideal");
+
     }
 
 }
