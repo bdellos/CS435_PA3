@@ -24,6 +24,7 @@ public class Driver {
         SparkConf conf = new SparkConf().setMaster("local").setAppName("IdealPR");
         JavaSparkContext sc = new JavaSparkContext(conf);
         IdealPageRank.getPageRanks(sc, args[0], args[1]);
+        TaxationPageRank.getPageRanks(sc, args[0], args[1]);
     }
 
 }

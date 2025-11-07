@@ -13,5 +13,9 @@ List files in hadoop
 hadoop fs -ls /CS435_PA3
 
 
-Run job:
+Run job w/ tiny input:
 spark-submit --class pa3.Driver --master local[*] /s/parsons/g/under/icurtis/CS435/PA3/CS435_PA3/target/pa3-1.0-SNAPSHOT.jar /CS435_PA3/input/tiny/links.txt /CS435_PA3/input/tiny/titles.txt
+
+See results:
+hadoop fs -cat /PA3/output/top10ideal/*
+hadoop fs -cat /PA3/output/top10taxation/*
